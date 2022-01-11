@@ -1,6 +1,8 @@
+import { Table } from "react-bootstrap";
+
 const MusicTable = (props) => {
     return (
-        <table className="table">
+        <Table striped bordered hover className="table">
             <thead>
                 <tr>
                     <th>ID</th>
@@ -25,7 +27,7 @@ const MusicTable = (props) => {
                     );
                 })}
             </tbody>
-        </table>
+        </Table>
     );
 }
 

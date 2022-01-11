@@ -1,0 +1,9 @@
+label {
+    color: white;
+    margin-left: 1em;
+    margin-right: .2em;
+}
+
+button.btn.btn-outline-light {
+    margin-left: 1em;
+}

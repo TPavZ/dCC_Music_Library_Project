@@ -1,6 +1,8 @@
 import axios from "axios";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Component } from "react";
 import MusicTable from "./Components/MusicTable/MusicTable";
+import NavBar from "./Components/NavBar/NavBar";
+
 
 function App() {
 
@@ -17,6 +19,8 @@ function App() {
 
   return (
     <div>
+      <NavBar />
+      {/* <SearchBar /> */}
       <MusicTable songs={songs} />
     </div>
   );
