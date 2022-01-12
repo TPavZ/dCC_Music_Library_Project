@@ -7,3 +7,7 @@ label {
 button.btn.btn-outline-light {
     margin-left: 1em;
 }
+
+form.search-bar {
+    background-color: black;
+}
