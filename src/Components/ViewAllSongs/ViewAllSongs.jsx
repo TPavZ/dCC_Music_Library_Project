@@ -1,14 +1,14 @@
-const ViewAllSongs = (props) => {
-    if(props.navbar === 'false'){
+/* const ViewAllSongs = (props) => {
+    if{
         return ( 
-            <button className='btn btn-primary text-align-center' onClick={() => {props.setAllSongs(props.allSongs)}} style={{'width':'100%'}}>Display All Songs</button>
+            <button></button>
          );
     }
-    else if(props.navbar ==='true'){
+    else if{
         return ( 
-            <button className="btn btn-outline-secondary" style={{'marginTop':'0.5em'}} data-toggle='popover' title='Display All Songs' data-content='Display All Songs' trigger='hover' onClick={() => {props.setAllSongs(props.allSongs)}}><i className="bi bi-eye"></i></button>
+            <button ></button>
          );
     }
 }
  
-export default ViewAllSongs;
+export default ViewAllSongs; */
