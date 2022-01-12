@@ -1,0 +1,9 @@
+label {
+    color: rgb(255, 0, 0);
+    margin-left: 1em;
+    margin-right: .2em;
+}
+
+button.btn.btn-outline-dark {
+    margin-left: 1em;
+}

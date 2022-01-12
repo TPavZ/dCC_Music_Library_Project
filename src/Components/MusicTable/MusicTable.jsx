@@ -1,6 +1,7 @@
 import { Table } from "react-bootstrap";
 
 const MusicTable = (props) => {
+    console.log(props.filteredSongs);
     return (
         <Table striped bordered hover className="table">
             <thead>
