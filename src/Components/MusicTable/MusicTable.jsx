@@ -6,7 +6,7 @@ const MusicTable = (props) => {
         <Table striped bordered hover className="table">
             <thead>
                 <tr>
-                    <th>ID</th>
+                    {/* <th>ID</th> */}
                     <th>Title</th>
                     <th>Album</th>
                     <th>Artist</th>
@@ -18,7 +18,7 @@ const MusicTable = (props) => {
                 {props.songs.map((song, index) => {
                     return (
                         <tr key={index}>
-                            <td>{song.id}</td>
+                            {/* <td>{song.id}</td> */}
                             <td>{song.title}</td>
                             <td>{song.album}</td>
                             <td>{song.artist}</td>
