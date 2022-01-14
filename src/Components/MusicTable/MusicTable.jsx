@@ -24,8 +24,7 @@ const MusicTable = (props) => {
                             <td>{song.artist}</td>
                             <td>{song.genre}</td>
                             <td>{song.release_date}</td>
-                            <td><Button>Edit</Button> <Button>Delete</Button></td>
-                            
+                            <td><Button type="submit" variant="outline-dark">Edit</Button> <Button type="submit" variant="outline-dark">Delete</Button></td>                            
                         </tr>
                     );
                 })}
