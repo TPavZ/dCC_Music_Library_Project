@@ -10,7 +10,7 @@ const NavBar = (props) => {
 
         <Navbar /* float="top" */ bg="dark" expand="lg">
             <Container fluid>
-                <Navbar.Brand>The dCC Music Library</Navbar.Brand>
+                <Navbar.Brand>Tyler's dCC Music Library</Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
                     <SearchBar />
