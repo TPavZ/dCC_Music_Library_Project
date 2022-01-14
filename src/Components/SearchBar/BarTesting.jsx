@@ -12,7 +12,7 @@ const BarTesting = (props) => {
 
     return (
         <form onSubmit={handleSubmit} className="search-bar">
-            <label>Library Search</label>
+            <label>Search Library</label>
             <input type="search" value={input} onChange={(event) => setInput(event.target.value)} />
             <Button type="submit" variant="outline-dark">Search</Button>
         </form>

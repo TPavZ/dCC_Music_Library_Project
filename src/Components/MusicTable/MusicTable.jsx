@@ -1,4 +1,4 @@
-import { Table } from "react-bootstrap";
+import { Table, Button } from "react-bootstrap";
 
 const MusicTable = (props) => {
     console.log(props.filteredSongs);
@@ -24,6 +24,8 @@ const MusicTable = (props) => {
                             <td>{song.artist}</td>
                             <td>{song.genre}</td>
                             <td>{song.release_date}</td>
+                            <td><Button>Edit</Button> <Button>Delete</Button></td>
+                            
                         </tr>
                     );
                 })}
