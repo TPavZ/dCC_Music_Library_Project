@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { Form, FormControl, Button } from "react-bootstrap";
-import axios from "axios";
+import React, { useState } from "react";
+import { Button } from "react-bootstrap";
 import "./SearchBar.css"
 
 
@@ -43,4 +42,4 @@ const SearchBar = (props) => {
     );
 }
 
-export default SearchBar
+export default SearchBar;

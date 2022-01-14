@@ -4,6 +4,7 @@ import MusicTable from "./Components/MusicTable/MusicTable";
 import NavBar from "./Components/NavBar/NavBar";
 import BarTesting from "./Components/SearchBar/BarTesting";
 import ViewAllSongs from "./Components/ViewAllSongs/ViewAllSongs";
+import SongForm from "./Components/SongForm/SongForm";
 
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
         {/* <ViewAllSongs filteredSongs={filteredSongs}/> */}
         {/* <SearchBar /> */}
         <MusicTable songs={songs} />
+        <SongForm />
         <BarTesting filterSongs={filterSongs} />
       </div>
 

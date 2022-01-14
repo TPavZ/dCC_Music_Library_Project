@@ -1,5 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Navbar, Button, Container, Form, FormControl } from "react-bootstrap";
+import { Navbar, Container } from "react-bootstrap";
 import "./NavBar.css"
 import SearchBar from "../SearchBar/SearchBar";
 
@@ -26,8 +26,8 @@ const NavBar = (props) => {
 export default NavBar;
 
 
-{/* A1*/ }
-{/* <Form className="d-flex">
+/* A1
+ <Form className="d-flex">
                         <FormControl 
                             type="search"
                             placeholder="Search"
@@ -35,4 +35,4 @@ export default NavBar;
                             aria-label="Search"
                         />
                         <Button variant="outline-light">Search</Button>
-                    </Form> */}
+                    </Form> */
