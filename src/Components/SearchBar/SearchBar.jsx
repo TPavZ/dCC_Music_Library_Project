@@ -14,11 +14,11 @@ const SearchBar = (props) => {
     function handleSubmit(event) {
         event.preventDefault();
         let song = props.songs.filter(song => {
-            if (song.title == title) { return true };
-            if (song.album == album) { return true };
-            if (song.artist == artist) { return true };
-            if (song.genre == genre) { return true };
-            if (song.releaseDate == releaseDate) { return true };
+            if (song.title === title) { return true };
+            if (song.album === album) { return true };
+            if (song.artist === artist) { return true };
+            if (song.genre === genre) { return true };
+            if (song.release_date === releaseDate) { return true };
         });
         props.songSearch(song);
     }

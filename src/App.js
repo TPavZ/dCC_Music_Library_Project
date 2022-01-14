@@ -15,32 +15,33 @@ function App() {
     getAllSongs();
   }, []);
 
-  async function getAllSongs() {
-    let response = await axios.get("http://www.devcodecampmusiclibrary.com/api/music/");
+  async function getAllSongs() { 
+    let response = await axios.get("http://127.0.0.1:8000/music/");
     setSongs(response.data)
   }
 
   function filterSongs(input) {
-    let song = songs.filter(song => {
-      if (song.title.includes(input)) { return true };
-      if (song.album.includes(input)) { return true };
-      if (song.artist.includes(input)) { return true };
-      if (song.genre.includes(input)) { return true };
-      if (song.releaseDate.includes(input)) { return true };
+    let song = songs.filter(element => {
+      if (element.title.includes(input)) { return true };
+      if (element.album.includes(input)) { return true };
+      if (element.artist.includes(input)) { return true };
+      if (element.genre.includes(input)) { return true };
+      if (song.release_date.includes(input)) { return true };
     });
     setfilteredSongs(song);
   }
 
-  return (
-    <div>
-      <NavBar />
-      {/* <ViewAllSongs filteredSongs={filteredSongs} /> */}
-      {/* <SearchBar /> */}
-      <MusicTable songs={songs} />
-      <BarTesting filterSongs={filterSongs} />
-    </div>
+  if (songs !== [])
+    return (
+      <div>
+        <NavBar />
+        {/* <ViewAllSongs filteredSongs={filteredSongs}/> */}
+        {/* <SearchBar /> */}
+        <MusicTable songs={songs} />
+        <BarTesting filterSongs={filterSongs} />
+      </div>
 
-  );
+    );
 }
 
 export default App;
