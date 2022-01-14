@@ -34,7 +34,7 @@ const SearchBar = (props) => {
                 <label>Song Genre</label>
                 <input value={genre} onChange={(event) => setGenre(event.target.value)}></input>
                 <label>Song Release Date</label>
-                <input value={releaseDate} onChange={(event) => setReleaseDate(event.target.value)}></input>
+                <input type="date" value={releaseDate} onChange={(event) => setReleaseDate(event.target.value)}></input>
                 <Button type="submit" variant="outline-light">Search</Button>
             </div>
 
