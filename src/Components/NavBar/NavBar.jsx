@@ -1,7 +1,8 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Navbar, Container } from "react-bootstrap";
 import "./NavBar.css"
-import SearchBar from "../SearchBar/SearchBar";
+/* import SearchBar from "../SearchBar/SearchBar"; */
+import SongForm from "../SongForm/SongForm";
 
 //The dCC Music Library
 const NavBar = (props) => {
@@ -13,7 +14,8 @@ const NavBar = (props) => {
                 <Navbar.Brand>Tyler's dCC Music Library</Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
-                    <SearchBar />
+                    <SongForm />
+                    {/* <SearchBar /> */}
                     {/* A1 */}
                 </Navbar.Collapse>
             </Container>

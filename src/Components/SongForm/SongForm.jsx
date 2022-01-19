@@ -1,4 +1,4 @@
-import { useState, prevState } from 'react'
+import { useState } from 'react'
 import axios from 'axios'
 import { Button } from 'react-bootstrap'
 
@@ -7,8 +7,8 @@ const SongForm = (props) => {
 
     const handleChange = element => {
         const { name, value } = element.target;
-        setState(prevState => ({
-            ...prevState,
+        setState(lastState => ({
+            ...lastState,
             [name]: value
         }));
     }
@@ -19,11 +19,13 @@ const SongForm = (props) => {
         props.newSong()
     }
 
+    function refreshPage() {
+        window.location.reload(false);
+      }
+
     return (
-        <form onSubmit={handleSubmit} className="song-form">
-            <div>
-                <h4>Add A Song</h4>
-                <label>Song Title</label>
+            <form onSubmit={handleSubmit} className="song-form">
+                <label><strong>Add A Song:</strong> Song Title</label>
                 <input name="title" onChange={handleChange} ></input>
                 <label>Song Album</label>
                 <input name="album" onChange={handleChange} ></input>
@@ -33,10 +35,8 @@ const SongForm = (props) => {
                 <input name="genre" onChange={handleChange} ></input>
                 <label>Song Release Date</label>
                 <input type="date" name="release_date" onChange={handleChange} ></input>
-                <Button type="submit" variant="outline-light">Submit</Button>
-            </div>
-
-        </form>
+                <Button type="submit" variant="outline-light" onClick={refreshPage}>Submit</Button>
+            </form>   
     );
 }
 

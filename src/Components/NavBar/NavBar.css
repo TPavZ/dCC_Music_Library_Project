@@ -6,3 +6,10 @@
     background-color: white;
 }
 
+form.song-form label {
+    color: white !important;
+}
+
+form.song-form {
+    float: right;
+}
