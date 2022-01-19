@@ -4,7 +4,7 @@ import MusicTable from "./Components/MusicTable/MusicTable";
 import NavBar from "./Components/NavBar/NavBar";
 import SearchBar from "./Components/SearchBar/SearchBar";
 import SongForm from "./Components/SongForm/SongForm";
-import EditSong from "./Components/EditSong/EditSong";
+/* import EditSong from "./Components/EditSong/EditSong"; */
 
 function App() {
 
@@ -19,7 +19,6 @@ function App() {
     let response = await axios.get("http://127.0.0.1:8000/music/");
     setAllSongs(response.data);
     setfilteredSongs(response.data);
-
   }
 
   const filterSongs = (searchTerm) => {
@@ -37,12 +36,17 @@ function App() {
     setfilteredSongs(matchingSongs)
   }
 
+  async function deleteSong(id) {
+    let response = await axios.delete(`http://127.0.0.1:8000/music/${id}/`);
+    getAllSongs();
+  }
+
   return (
     <div>
       <NavBar />
       <SearchBar filterSongs={filterSongs} />
-      <MusicTable songs={filteredSongs} />
-      <SongForm />
+      <MusicTable songs={filteredSongs} deleteSong={deleteSong} />
+      <SongForm getAllSongs={getAllSongs} />
     </div>
   );
 }

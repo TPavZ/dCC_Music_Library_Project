@@ -16,26 +16,26 @@ const SongForm = (props) => {
     const handleSubmit = async (e) => {
         e.preventDefault()
         await axios.post('http://127.0.0.1:8000/music/', state)
-        props.newSong()
+        props.getAllSongs()
     }
 
-    function refreshPage() {
+    /* function refreshPage() {
         window.location.reload(false);
     }
-
+ */
     return (
         <form onSubmit={handleSubmit} className="song-form">
             <label><strong>Add A Song:</strong> Song Title</label>
-            <input name="title" onChange={handleChange} ></input>
+            <input name="title" onChange={handleChange} value={state.title}></input>
             <label>Song Album:</label>
-            <input name="album" onChange={handleChange} ></input>
+            <input name="album" onChange={handleChange} value={state.album}></input>
             <label>Song Artist:</label>
-            <input name="artist" onChange={handleChange} ></input>
+            <input name="artist" onChange={handleChange} value={state.artist}></input>
             <label>Song Genre:</label>
-            <input name="genre" onChange={handleChange} ></input>
+            <input name="genre" onChange={handleChange} value={state.genre}></input>
             <label>Song Release Date:</label>
-            <input type="date" name="release_date" onChange={handleChange} ></input>
-            <Button type="submit" variant="outline-dark" onClick={refreshPage}>Submit</Button>
+            <input type="date" name="release_date" onChange={handleChange} value={state.release_date}></input>
+            <Button type="submit" variant="outline-dark" /* onClick={refreshPage} */>Submit</Button>
         </form>
     );
 }
