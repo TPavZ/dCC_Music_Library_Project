@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useState, useEffect } from "react";
 import MusicTable from "./Components/MusicTable/MusicTable";
 import NavBar from "./Components/NavBar/NavBar";
-import BarTesting from "./Components/SearchBar/BarTesting";
+import SearchBar from "./Components/SearchBar/SearchBar";
 /* import ViewAllSongs from "./Components/ViewAllSongs/ViewAllSongs"; */
 /* import SongForm from "./Components/SongForm/SongForm"; */
 
@@ -46,7 +46,7 @@ function App() {
       {/* <SearchBar /> */}
       <MusicTable songs={filteredSongs} />
       {/* <SongForm /> */}
-      <BarTesting filterSongs={filterSongs}/>
+      <SearchBar filterSongs={filterSongs}/>
     </div>
 
   );

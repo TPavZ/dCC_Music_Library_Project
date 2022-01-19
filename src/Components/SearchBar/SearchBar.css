@@ -1,13 +1,9 @@
 label {
-    color: white;
+    color: rgb(0, 0, 0);
     margin-left: 1em;
     margin-right: .2em;
 }
 
-button.btn.btn-outline-light {
+button.btn.btn-outline-dark {
     margin-left: 1em;
-}
-
-form.search-bar {
-    background-color: black;
 }
