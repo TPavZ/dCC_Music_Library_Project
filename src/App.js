@@ -41,11 +41,16 @@ function App() {
     getAllSongs();
   }
 
+  async function editSong(id, updatedSong) {
+    let response = await axios.put(`http://127.0.0.1:8000/music/${id}/`, updatedSong);
+    getAllSongs();
+  }
+
   return (
     <div>
       <NavBar />
       <SearchBar filterSongs={filterSongs} />
-      <MusicTable songs={filteredSongs} deleteSong={deleteSong} />
+      <MusicTable songs={filteredSongs} deleteSong={deleteSong} editSong={editSong} />
       <SongForm getAllSongs={getAllSongs} />
     </div>
   );

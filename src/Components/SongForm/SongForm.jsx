@@ -19,10 +19,6 @@ const SongForm = (props) => {
         props.getAllSongs()
     }
 
-    /* function refreshPage() {
-        window.location.reload(false);
-    }
- */
     return (
         <form onSubmit={handleSubmit} className="song-form">
             <label><strong>Add A Song:</strong> Song Title</label>
